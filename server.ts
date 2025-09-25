@@ -11,6 +11,8 @@ import rateLimit from "express-rate-limit";
 
 dotenv.config();
 const app = express();
+// Trust proxy for Vercel/X-Forwarded-* headers
+app.set("trust proxy", 1);
 
 
 // 👇 حل مشكلة __dirname
