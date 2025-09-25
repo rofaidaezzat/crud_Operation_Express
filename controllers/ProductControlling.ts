@@ -16,7 +16,7 @@ class ProductController {
     res.render("products", { products: data.products, count: data.count });
   } catch (error) {
     console.error("Error fetching products:", error);
-    res.status(500).render("notfound", { title: "Internal Server Error" });
+    res.status(500).render("NotFound", { title: "Internal Server Error" });
   }
 };
 
