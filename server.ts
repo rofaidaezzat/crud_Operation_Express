@@ -2,9 +2,9 @@ import express from "express";
 import type { Request, Response } from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import productRoutes from "./router/products";
-import productApiRoutes from "./router/products.api";
-import ErrorMiddleware from "./middleware/Error";
+import productRoutes from "./router/products.js";
+import productApiRoutes from "./router/products.api.js";
+import ErrorMiddleware from "./middleware/Error.js";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
@@ -52,7 +52,7 @@ app.get("/", (req: Request, res: Response) => {
 
 // Catch-all 404
 app.use((req: Request, res: Response) => {
-  res.status(404).render("notfound", { title: "Page Not Found" });
+  res.status(404).render("NotFound", { title: "Page Not Found" });
 });
 
 // Error handling middleware
