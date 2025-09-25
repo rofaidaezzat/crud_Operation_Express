@@ -11,7 +11,7 @@ import rateLimit from "express-rate-limit";
 
 dotenv.config();
 const app = express();
-const PORT = 3000;
+
 
 // 👇 حل مشكلة __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -58,6 +58,5 @@ app.use((req: Request, res: Response) => {
 // Error handling middleware
 app.use(ErrorMiddleware.handle);
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
-});
+export default app;
+
