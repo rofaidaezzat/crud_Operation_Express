@@ -1,5 +1,5 @@
 import type { IProduct } from "../interfaces";
-import pool from "../models/db";
+import pool from "../models/db.js";
 
 // service => data storage and retrieving
 class ProductService {
