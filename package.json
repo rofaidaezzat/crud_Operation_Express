@@ -2,11 +2,12 @@
   "name": "expressjs",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
+ "scripts": {
   "dev": "tsx server.ts",
   "build": "tsc",
   "start": "node dist/server.js"
 }
+
 ,
   "type": "module",
   "keywords": [],
