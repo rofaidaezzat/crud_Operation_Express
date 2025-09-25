@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .container
+    h1 Products List
+    .products-grid
+      each product in products
+        .product-card
+          h2= product.name
+          p.description= product.description
+          p.price Price: #{product.price} EGP
+          p.quantity Available: #{product.quantity}
+          a.btn(href=`/products/${product.id}`) View Details
